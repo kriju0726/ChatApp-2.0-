@@ -99,7 +99,7 @@ const Sidebar = ({ onSelectUser }) => {
           console.log(data.message);
         }
         toast.info(data.message);
-        localStorage.removeItem("ChatApp(2.0)");
+        localStorage.removeItem("ChatApp_2");
         setAuthUser(null);
         navigate("/login");
       } catch (error) {

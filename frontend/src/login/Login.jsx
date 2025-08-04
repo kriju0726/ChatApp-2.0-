@@ -31,7 +31,7 @@ const Login = () => {
                 console.log(data.message);
             }
             toast.success(data.message);
-            localStorage.setItem('ChatApp(2.0)',JSON.stringify(data))
+            localStorage.setItem('ChatApp_2',JSON.stringify(data))
             setAuthUser(data)
             setLoading(false)
             navigate('/')
