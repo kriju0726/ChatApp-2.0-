@@ -6,7 +6,7 @@ import authRouter from './rout/authUser.js';
 import messageRouter from './rout/messageRout.js';
 import cookieParser from "cookie-parser";
 import userRouter from './rout/userRout.js';
-import cors from "cors";
+//import cors from "cors";
 import path from "path";
 import { app, server, io } from './Socket/socket.js'; // Make sure io is exported for socket-level CORS
 
@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname,"/frontend/dist")))
 })*/
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
 
 
