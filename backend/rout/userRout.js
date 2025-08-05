@@ -1,4 +1,3 @@
-
 import express from 'express'
 import isLogin from '../middleware/isLogin.js'
 import { getCorrentChatters, getUserBySearch } from '../routControlers/userhandlerControler.js'

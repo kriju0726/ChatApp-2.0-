@@ -6,19 +6,12 @@ import authRouter from './rout/authUser.js';
 import messageRouter from './rout/messageRout.js';
 import cookieParser from "cookie-parser";
 import userRouter from './rout/userRout.js';
-//import cors from "cors";
 import path from "path";
-import { app, server, io } from './Socket/socket.js'; // Make sure io is exported for socket-level CORS
+import { app, server } from './Socket/socket.js'; 
 
 const __dirname = path.resolve();
 
 dotenv.config();
-
-// ✅ Allow CORS for frontend (Vite dev server at 5173)
-/*app.use(cors({
-    origin: "http://localhost:5173",
-    credentials: true
-}));*/
 
 // ✅ Middlewares
 app.use(express.json());
@@ -29,21 +22,11 @@ app.use('/api/auth', authRouter);
 app.use('/api/message', messageRouter);
 app.use('/api/user', userRouter);
 
-// ✅ Test Route
-/*app.get("/", (req, res) => {
-    res.send("Server is Working.");
-});*/
-
 app.use(express.static(path.join(__dirname,"/frontend/dist")))
-
-/*app.get("*",(req,res)=>{
-    res.sendFile(path.join(__dirname,"frontend","dist","index.html"))
-})*/
 
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
-
 
 // ✅ Start Server
 const PORT = process.env.PORT || 3000;
