@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/send/:id',isLogin , sendMessage)
 
-router.get('/:id',isLogin , getMessages);
+router.get('/chat/:id',isLogin , getMessages);
 
 export default router;
 
