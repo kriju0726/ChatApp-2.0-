@@ -114,6 +114,9 @@ Authentication: JWT
 ![Register Page](./Screenshots/register.png)
 
 
+[▶️ Watch Demo Video](https://drive.google.com/file/d/1eUkVr3SyNQEqsD9I_CqQFpNQMR-_wQyH/view?usp=sharing)
+
+
 
 🤝 Contributing
 Contributions are welcome!
